@@ -1,0 +1,21 @@
+{
+  "name": "haawa-saathi",
+  "version": "1.0.0",
+  "description": "GenAI-powered assistant for families and communities to navigate winter smog, optimize routines, and implement low-cost IAQ hacks.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "smog",
+    "aqi",
+    "genai",
+    "air-pollution",
+    "indoor-air-quality",
+    "iaq",
+    "delhi-smog",
+    "clean-air"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}
