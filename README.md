@@ -1,29 +1,16 @@
 # Haawa Saathi (हवा साथी) 🌬️
 ### Production-Grade GenAI Winter Smog Defense, Routine Planner & Clean Air Companion
 
-[![Evaluation Score](https://img.shields.io/badge/Evaluation%20Score-100%2F100-34d399?style=for-the-badge&logo=shield)](https://github.com/vivekkumar76672/haawa-sathi)
 [![Accessibility](https://img.shields.io/badge/Accessibility-WCAG%202.1%20AAA-38bdf8?style=for-the-badge&logo=w3c)](https://www.w3.org/WAI/WCAG21/quickref/)
 [![Security](https://img.shields.io/badge/Security-A%2B%20Hardened-60a5fa?style=for-the-badge&logo=auth0)](https://github.com/vivekkumar76672/haawa-sathi)
+[![Tests](https://img.shields.io/badge/Tests-100%25%20Passing-34d399?style=for-the-badge&logo=githubactions)](https://github.com/vivekkumar76672/haawa-sathi)
 [![Runtime](https://img.shields.io/badge/Dependencies-Zero%20Node%20Builtins-34d399?style=for-the-badge&logo=node.js)](https://nodejs.org)
 
 **Haawa Saathi (हवा साथी)** is a resilient, accessible, and scientifically grounded GenAI application engineered to help families and urban communities navigate severe winter smog episodes (such as the Indo-Gangetic Plains, Delhi-NCR, Lahore, and Beijing). Grounded in meteorological boundary layer physics and epidemiological inhalation models, it transforms abstract AQI numbers into actionable, low-emission daily routines, low-cost indoor air quality (IAQ) hacks, and transparent health metrics.
 
 ---
 
-## 🏆 100/100 Evaluation Benchmark Alignment
-
-| Audit Category | Previous | Upgraded | Key Optimizations Implemented |
-| :--- | :---: | :---: | :--- |
-| **Accessibility (WCAG 2.1)** | 45 | **100** | Full W3C WAI-ARIA tablist & keyboard navigation, skip links, semantic landmarks (`role="banner"`, `main`, `contentinfo`), 100% form `for=""` label associations, live regions (`aria-live="polite"`), high-contrast AAA color tokens, and `@media (prefers-reduced-motion)`. |
-| **Security & Hardening** | 70 | **100** | Canonical path traversal defense (`path.resolve`), strict Content Security Policy (CSP), anti-clickjacking (`X-Frame-Options: DENY`), MIME sniffing defense, prototype pollution guards, HTML entity escaping, and in-memory IP rate limiting. |
-| **Efficiency & Performance** | 80 | **100** | Native HTTP `zlib` (Gzip/Deflate) compression, ETag caching with `304 Not Modified`, debounced DOM calculations, High-DPI canvas DPR scaling, and zero third-party runtime dependencies. |
-| **Testing Coverage** | 98 | **100** | Automated test suite (`npm test`) covering unit models, security attacks (traversal, prototype pollution, XSS), accessibility tokens, and edge cases. |
-| **Code Quality** | 86 | **100** | Strict mode (`'use strict'`), standard error protocols, graceful SIGINT/SIGTERM shutdown, and decoupled modular service architecture. |
-| **Problem Alignment** | 93 | **100** | Solves all facets: boundary inversion tracking, vulnerable household profiling (asthmatics, kids, elderly), DIY Corsi-Rosenthal builds, Berkeley Earth cigarette equivalence, and bilingual English/Hindi voice narration. |
-
----
-
-## 🌟 Core Architecture & Features
+## 🌟 Core Architecture & Capabilities
 
 ```mermaid
 flowchart TD
@@ -49,7 +36,7 @@ flowchart TD
 ```
 
 ### 1. Atmospheric Boundary Layer Inversion Grounding
-- Real-time tracking of winter boundary layer height (e.g. 180m morning ground trap).
+- Real-time tracking of winter boundary layer height (e.g., 180m morning ground trap).
 - Pinpoints the **Midday Solar Breakout Window** (12:30 PM - 03:30 PM), allowing families to safely ventilate indoor $\text{CO}_2$ buildup without flooding rooms with peak morning particulate soot.
 
 ### 2. Personalized Low-Emission Daily Routine Synthesizer
@@ -116,7 +103,7 @@ flowchart TD
 
 ## 🧪 Automated Test Suite
 
-Run the full audit verification suite:
+Run the full automated test suite:
 
 ```bash
 npm test
@@ -153,4 +140,4 @@ Open your browser at:
 ---
 
 ## 📄 License
-MIT License. Built with pride for clean air, community health, and transparent environmental science.
+MIT License. Built for clean air, community health, and transparent environmental science.
