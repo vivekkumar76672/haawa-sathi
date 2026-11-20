@@ -405,24 +405,30 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-// --- GRACEFUL SHUTDOWN ---
-const serverInstance = server.listen(PORT, '0.0.0.0', () => {
-  console.log(`[Haawa Saathi v2.0] Production server listening on http://127.0.0.1:${PORT}`);
-});
+// --- GRACEFUL SHUTDOWN & VERCEL SERVERLESS COMPATIBILITY ---
+let serverInstance = null;
 
-function gracefulShutdown(signal) {
-  console.log(`\nReceived ${signal}. Gracefully terminating Haawa Saathi server...`);
-  serverInstance.close(() => {
-    console.log('Server closed. Process exit.');
-    process.exit(0);
+if (process.env.VERCEL !== '1' && !process.env.NOW_REGION) {
+  serverInstance = server.listen(PORT, '0.0.0.0', () => {
+    console.log(`[Haawa Saathi v2.0] Production server listening on http://127.0.0.1:${PORT}`);
   });
-  setTimeout(() => {
-    console.error('Forced shutdown after timeout.');
-    process.exit(1);
-  }, 5000);
+
+  function gracefulShutdown(signal) {
+    console.log(`\nReceived ${signal}. Gracefully terminating Haawa Saathi server...`);
+    if (serverInstance) {
+      serverInstance.close(() => {
+        console.log('Server closed. Process exit.');
+        process.exit(0);
+      });
+      setTimeout(() => {
+        console.error('Forced shutdown after timeout.');
+        process.exit(1);
+      }, 5000);
+    }
+  }
+
+  process.on('SIGINT', () => gracefulShutdown('SIGINT'));
+  process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
 }
 
-process.on('SIGINT', () => gracefulShutdown('SIGINT'));
-process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
-
-module.exports = server;
+module.exports = (req, res) => server.emit('request', req, res);
