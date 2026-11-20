@@ -1,6 +1,7 @@
 # Haawa Saathi (हवा साथी) 🌬️
 ### Production-Grade GenAI Winter Smog Defense, Routine Planner & Clean Air Companion
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel%20Deployed-000000?style=for-the-badge&logo=vercel)](https://haawa-sathi-i0lsy3bdn-haawa-sathi.vercel.app/)
 [![Accessibility](https://img.shields.io/badge/Accessibility-WCAG%202.1%20AAA-38bdf8?style=for-the-badge&logo=w3c)](https://www.w3.org/WAI/WCAG21/quickref/)
 [![Security](https://img.shields.io/badge/Security-A%2B%20Hardened-60a5fa?style=for-the-badge&logo=auth0)](https://github.com/vivekkumar76672/haawa-sathi)
 [![Tests](https://img.shields.io/badge/Tests-100%25%20Passing-34d399?style=for-the-badge&logo=githubactions)](https://github.com/vivekkumar76672/haawa-sathi)
